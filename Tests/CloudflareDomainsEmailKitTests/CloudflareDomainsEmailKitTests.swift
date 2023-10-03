@@ -2,7 +2,7 @@ import XCTest
 @testable import CloudflareDomainsEmailKit
 
 final class CloudflareDomainsEmailKitTests: XCTestCase {
-    func testExample() throws {
+    func testExample() async throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
 
