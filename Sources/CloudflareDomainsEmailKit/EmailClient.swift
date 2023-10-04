@@ -1,5 +1,7 @@
 import Foundation
 import AsyncHTTPClient
+import NIOCore
+import NIOFoundationCompat
 
 public struct EmailClient {
     
@@ -11,7 +13,7 @@ public struct EmailClient {
             var request = HTTPClientRequest(url: workerURL)
             request.method = .POST
             request.headers.add(name: "content-type", value: "application/json")
-            request.body = .bytes(.init(data: data))
+            request.body = .bytes(ByteBuffer(data: data))
             let response = try await httpClient.execute(request, timeout: .seconds(60))
             guard response.status == .ok else {
                 throw EmailClientError.somethingWentWrong
