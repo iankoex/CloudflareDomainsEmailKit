@@ -1,7 +1,7 @@
 import Foundation
 
 /// The JSON body required by mailchannels
-public struct MailChannelsContent: Codable {
+public struct EmailContent: Codable {
     public var personalizations: [Personalization]
     
     // The sender of the email
@@ -39,7 +39,7 @@ public struct MailChannelsContent: Codable {
     }
 }
 
-extension MailChannelsContent {
+extension EmailContent {
     public struct Personalization: Codable {
         public var recipients: [MailUser]
         public var dkimDomain: String?
@@ -67,7 +67,7 @@ extension MailChannelsContent {
     }
 }
 
-extension MailChannelsContent {
+extension EmailContent {
     public struct EmailBody: Codable {
         public var type: String
         public var value: String

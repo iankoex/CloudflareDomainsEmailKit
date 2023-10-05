@@ -5,7 +5,7 @@ import NIOFoundationCompat
 
 public struct EmailClient {
     
-    public static func sendMail(content: MailChannelsContent, using workerURL: String) async throws {
+    public static func sendMail(_ content: EmailContent, using workerURL: String) async throws {
         let httpClient = HTTPClient(eventLoopGroupProvider: .singleton)
         var emailClientError: EmailClientError? = nil
         do {

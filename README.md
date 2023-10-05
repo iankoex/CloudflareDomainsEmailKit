@@ -107,9 +107,9 @@ And add it as a dependency of your target:
 Create the content.
 
 ```swift
-let content = MailChannelsContent(
+let content = EmailContent(
     personalizations: [
-        MailChannelsContent.Personalization(
+        EmailContent.Personalization(
             recipients: [
                 MailUser(name: "User 1", email: "username@email.com")
             ]
@@ -118,7 +118,7 @@ let content = MailChannelsContent(
     from: MailUser(name: "Support", email: "support@example.com"),
     subject: "Your App Data",
     content: [
-        MailChannelsContent.EmailBody(type: .plainText,value: "This is the email's body")
+        EmailContent.EmailBody(type: .plainText,value: "This is the email's body")
     ]
 )
 ```
