@@ -6,7 +6,10 @@ import PackageDescription
 let package = Package(
     name: "CloudflareDomainsEmailKit",
     platforms: [
-        .macOS(.v10_15)
+        .macOS(.v10_15),
+        .iOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v6)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
