@@ -41,7 +41,7 @@ On the Workers & Pages Overview Page, click on Create Application.
 
 Create and deploy a Hello World script. You can only edit the worker after deployment.
 
-Replce the code with the following, then click on save and deploy.
+Replace the code with the following, then click on save and deploy.
 
 ```javascript
 async function readRequestBody(request) {
@@ -95,7 +95,7 @@ Take note of the domain of your worker you will need that for section 3
 To get started, add the CloudflareDomainsEmailKit dependency:
 
 ```swift
-.package(url: "https://github.com/iankoex/CloudflareDomainsEmailKit.git", from: "0.1.1")
+.package(url: "https://github.com/iankoex/CloudflareDomainsEmailKit.git", from: "0.1.4")
 ```
 
 And add it as a dependency of your target:
