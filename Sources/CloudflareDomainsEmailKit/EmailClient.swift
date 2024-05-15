@@ -6,7 +6,7 @@ import NIOFoundationCompat
 public struct EmailClient {
     
     public static func sendMail(_ content: EmailContent, using workerURL: String) async throws {
-        let httpClient = HTTPClient(eventLoopGroupProvider: .singleton)
+        let httpClient = HTTPClient.shared
         var emailClientError: EmailClientError? = nil
         do {
             let data = try JSONEncoder().encode(content)
