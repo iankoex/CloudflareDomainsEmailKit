@@ -1,11 +1,13 @@
-enum EmailClientError: Error, CustomDebugStringConvertible, CustomStringConvertible {
+import Foundation
+
+public enum EmailClientError: Error {
     case somethingWentWrong
     case workerSendingMailError(String?)
     case requestFailed(String?)
-    
-    var description: String { debugDescription }
-    
-    var debugDescription: String {
+}
+
+extension EmailClientError: CustomDebugStringConvertible {
+    public var debugDescription: String {
         switch self {
             case .somethingWentWrong:
                 return "Something went wrong"
@@ -15,4 +17,12 @@ enum EmailClientError: Error, CustomDebugStringConvertible, CustomStringConverti
                 return "Request Failed: \(error ?? "nil")"
         }
     }
+}
+
+extension EmailClientError: CustomStringConvertible {
+    public var description: String { debugDescription }
+}
+
+extension EmailClientError: LocalizedError {
+    public var errorDescription: String? { debugDescription }
 }
