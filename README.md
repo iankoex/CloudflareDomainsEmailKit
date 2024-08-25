@@ -1,6 +1,13 @@
-# CloudflareDomainsEmailKit
+# CloudflareDomainsEmailKit ⚠️
 
 Send Emails From Your Cloudflare Domains Email using Swift
+
+## ⚠️ MailChannels End of Life Notice - Cloudflare Workers
+> Since launching our free email sending API for Cloudflare Workers customers, we have been proud to provide a simple yet effective solution to deliver messages from Workers code with a minimum of setup complexity. Unfortunately, we regret to announce that this free service will be coming to an end on June 30th, 2024.
+
+Read the full announcement [here](https://support.mailchannels.com/hc/en-us/articles/26814255454093-End-of-Life-Notice-Cloudflare-Workers)
+
+Since sending emails via mailchannels from a cloudflare worker is no longer possible, this package will not work.
 
 # Requirements
 
